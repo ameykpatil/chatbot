@@ -17,12 +17,12 @@ The code is written keeping in mind following qualities:
 
 Apart from this -
 - Basic unit tests are written to demonstrate testing using Go's basic testing framework
-- In order to run & check regardless pf the environment the support for docker is provided   
+- In order to run & check regardless of the environment the support for docker is provided   
 - Setup section in Readme is provided for all the setup & run instructions
 
 ## Setup & Run
-Clone the repository
-git clone https://github.com/ameykpatil/chatbot
+Clone the repository  
+`git clone https://github.com/ameykpatil/chatbot`
 
 The application can be run using a Docker container images built & setup using the `Makefile`.
 
