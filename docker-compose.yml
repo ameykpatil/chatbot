@@ -1,0 +1,23 @@
+version: "3"
+services:
+
+  http:
+    build: .
+    ports:
+      - '8000:8000'
+    depends_on:
+      - mongo
+    environment:
+      HTTP_BASE_URL: localhost
+      HTTP_PORT: "8000"
+      MONGODB_URI: mongodb://root:root@mongo:27017
+      INTENT_SERVICE_URL: https://chat.ultimate.ai
+      INTENT_SERVICE_API_KEY: 825765d4-7f8d-4d83-bb03-9d45ac9c27c0
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27000:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
